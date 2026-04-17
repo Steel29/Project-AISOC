@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A concise, public-safe reference site on practical AI use in a SOC environment."
+    />
+    <title>AI in the SOC | Reference Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">SOC Reference Hub</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="prompts.html" data-nav="prompts">Prompts</a>
+          <a href="capabilities.html" data-nav="capabilities">Capabilities</a>
+          <a href="safety.html" data-nav="safety">Safety</a>
+          <a href="resources.html" data-nav="resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Practical AI for security teams</p>
+            <h1>Use AI like a trusted SOC assistant, not a black box.</h1>
+            <p class="hero-text">
+              This site is a quick reference for applying AI safely and
+              effectively in day-to-day security operations. It stays public-safe,
+              concise, and focused on real work.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="prompts.html">Start with prompts</a>
+              <a class="button button-secondary" href="capabilities.html">See use cases</a>
+            </div>
+          </div>
+          <aside class="hero-card">
+            <img
+              src="assets/img/editorial-wave.svg"
+              alt=""
+              class="hero-illustration"
+            />
+            <div class="hero-card-inner">
+              <p class="mini-heading">Keep the mindset clear</p>
+              <ul class="check-list">
+                <li>AI helps summarize, structure, compare, and draft.</li>
+                <li>Human judgment stays in charge of decisions.</li>
+                <li>Safe inputs matter as much as smart prompts.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Quick map</p>
+            <h2>What this hub covers</h2>
+            <p>
+              Use it as a companion to the talk, not a long handbook. Each page
+              is built to be skimmed in a few minutes.
+            </p>
+          </div>
+          <div class="card-grid card-grid-4">
+            <a class="feature-card" href="prompts.html">
+              <span class="tag">Prompting</span>
+              <h3>Prompt patterns</h3>
+              <p>Reusable prompt formulas and SOC-ready examples.</p>
+            </a>
+            <a class="feature-card" href="capabilities.html">
+              <span class="tag">Workflow</span>
+              <h3>High-value use cases</h3>
+              <p>Where AI can save time without changing your role.</p>
+            </a>
+            <a class="feature-card" href="safety.html">
+              <span class="tag">Governance</span>
+              <h3>Safety first</h3>
+              <p>What not to share, how to sanitize, and how to verify.</p>
+            </a>
+            <a class="feature-card" href="resources.html">
+              <span class="tag">Learning</span>
+              <h3>Further reading</h3>
+              <p>Curated links, public repos, and official references.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Why this matters</p>
+            <h2>AI changes security work on both sides.</h2>
+          </div>
+          <div class="split-grid">
+            <article class="paper-card">
+              <h3>Defender gains</h3>
+              <ul class="plain-list">
+                <li>Turn noisy alerts into readable summaries.</li>
+                <li>Compare notes, indicators, and timelines faster.</li>
+                <li>Draft cleaner reports, queries, and handoffs.</li>
+                <li>Reduce repetitive cognitive load in daily operations.</li>
+              </ul>
+            </article>
+            <article class="paper-card accent-card">
+              <h3>Attacker gains</h3>
+              <ul class="plain-list">
+                <li>Faster phishing and social engineering content.</li>
+                <li>Quicker OSINT and recon synthesis.</li>
+                <li>Scaled low-effort script and content generation.</li>
+                <li>Improved speed even when skill level stays average.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Where AI helps</p>
+            <h2>Best fit: bounded, reviewable tasks</h2>
+          </div>
+          <div class="card-grid card-grid-3">
+            <article class="info-card">
+              <span class="tag">Triage</span>
+              <h3>Summarize and sort</h3>
+              <p>Useful for alert summaries, first-pass organization, and missing-evidence checks.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">Investigation</span>
+              <h3>Correlate and explain</h3>
+              <p>Helpful when comparing indicators, building timelines, or drafting next steps.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">Detection</span>
+              <h3>Draft and refine</h3>
+              <p>Good for query explanation, Sigma ideas, MITRE mapping, and tuning prompts.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">Reporting</span>
+              <h3>Communicate clearly</h3>
+              <p>Turn rough notes into concise case summaries, handoff notes, or manager updates.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">Vulnerability</span>
+              <h3>Prioritize faster</h3>
+              <p>Use it to weigh exposure, context, exploitability, and business relevance.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">Knowledge</span>
+              <h3>Surface playbooks</h3>
+              <p>Convert scattered notes into reusable runbook-style guidance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Good habits</p>
+            <h2>What strong team usage looks like</h2>
+          </div>
+          <div class="timeline-grid">
+            <article class="timeline-step">
+              <span class="step-number">01</span>
+              <h3>Start small</h3>
+              <p>Use AI first for tasks that are easy to review and low risk to share.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-number">02</span>
+              <h3>Keep humans in the loop</h3>
+              <p>Validate outputs before action, escalation, or communication.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-number">03</span>
+              <h3>Reuse what works</h3>
+              <p>Save strong prompts and turn them into shared team patterns.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">SOC AI Reference Hub</p>
+          <p class="footer-copy">
+            Public-safe companion content for a practical talk on AI in the SOC.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="prompts.html">Prompts</a>
+          <a href="safety.html">Safety</a>
+          <a href="resources.html">Resources</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

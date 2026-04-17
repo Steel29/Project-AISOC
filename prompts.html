@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Prompting patterns and example prompts for practical AI use in security operations."
+    />
+    <title>Prompt Patterns | SOC AI Reference Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="prompts">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">SOC Reference Hub</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="prompts.html" data-nav="prompts">Prompts</a>
+          <a href="capabilities.html" data-nav="capabilities">Capabilities</a>
+          <a href="safety.html" data-nav="safety">Safety</a>
+          <a href="resources.html" data-nav="resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Prompting in practice</p>
+          <h1>Clear prompts beat clever prompts.</h1>
+          <p class="hero-text">
+            Treat the model like a junior analyst who needs structured guidance:
+            role, context, task, output format, limits, and assumptions.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="formula-card">
+            <p class="mini-heading">Core formula</p>
+            <h2>Role + Context + Task + Format + Limits + Assumptions</h2>
+            <p>
+              If a prompt is vague, the answer usually gets vague too. Add just
+              enough structure to make the task reviewable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Copy-ready examples</p>
+            <h2>Prompt blocks you can reuse</h2>
+            <p>
+              These stay intentionally generic and sanitized so they are safe to
+              adapt inside approved environments.
+            </p>
+          </div>
+          <div class="prompt-grid">
+            <article class="prompt-card">
+              <div class="prompt-card-top">
+                <span class="tag">Triage</span>
+                <button class="copy-button" type="button" data-copy-target="prompt-alert">
+                  Copy
+                </button>
+              </div>
+              <h3>Alert summary</h3>
+              <pre id="prompt-alert">Act as a SOC analyst. Based on this sanitized alert, summarize the likely issue, possible impact, recommended next steps, and what evidence is still missing. Use bullet points and clearly state any assumptions.</pre>
+            </article>
+            <article class="prompt-card">
+              <div class="prompt-card-top">
+                <span class="tag">Investigation</span>
+                <button class="copy-button" type="button" data-copy-target="prompt-ioc">
+                  Copy
+                </button>
+              </div>
+              <h3>IOC correlation</h3>
+              <pre id="prompt-ioc">Compare these sanitized indicators, notes, and timeline entries. Group related items, identify likely themes, flag weak links, and suggest the top three follow-up checks before escalation.</pre>
+            </article>
+            <article class="prompt-card">
+              <div class="prompt-card-top">
+                <span class="tag">Detection</span>
+                <button class="copy-button" type="button" data-copy-target="prompt-query">
+                  Copy
+                </button>
+              </div>
+              <h3>Query helper</h3>
+              <pre id="prompt-query">Explain what this query is doing in plain language, identify blind spots, and propose a cleaner version for the same investigation goal. Keep the explanation concise and call out any assumptions.</pre>
+            </article>
+            <article class="prompt-card">
+              <div class="prompt-card-top">
+                <span class="tag">Vulnerability</span>
+                <button class="copy-button" type="button" data-copy-target="prompt-vuln">
+                  Copy
+                </button>
+              </div>
+              <h3>Prioritization support</h3>
+              <pre id="prompt-vuln">Review this sanitized vulnerability context. Prioritize the findings using exposure, exploitability, asset role, and likely attacker interest. Present the result as high, medium, or low priority with a short justification.</pre>
+            </article>
+            <article class="prompt-card">
+              <div class="prompt-card-top">
+                <span class="tag">Reporting</span>
+                <button class="copy-button" type="button" data-copy-target="prompt-report">
+                  Copy
+                </button>
+              </div>
+              <h3>Incident handoff</h3>
+              <pre id="prompt-report">Turn these sanitized investigation notes into a clean handoff update. Include current understanding, notable evidence, unresolved questions, and immediate next actions. Keep the tone professional and concise.</pre>
+            </article>
+            <article class="prompt-card">
+              <div class="prompt-card-top">
+                <span class="tag">Learning</span>
+                <button class="copy-button" type="button" data-copy-target="prompt-intel">
+                  Copy
+                </button>
+              </div>
+              <h3>Threat intel digest</h3>
+              <pre id="prompt-intel">Summarize this threat intelligence content for a SOC audience. Focus on behaviors to watch, likely relevance, operational takeaways, and any gaps that would need confirmation before action.</pre>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Quality control</p>
+            <h2>Prompt habits that improve results</h2>
+          </div>
+          <div class="accordion-group">
+            <details class="accordion" open>
+              <summary>Ask for assumptions and uncertainty</summary>
+              <p>
+                This makes it easier to spot weak reasoning and stops the model
+                from sounding more certain than it should.
+              </p>
+            </details>
+            <details class="accordion">
+              <summary>Define the output shape before the answer starts</summary>
+              <p>
+                Bullet points, tables, short summaries, and prioritized lists are
+                easier to review than free-form text.
+              </p>
+            </details>
+            <details class="accordion">
+              <summary>Keep context relevant, not maximal</summary>
+              <p>
+                Extra text can dilute the task. Give the model what it needs,
+                then stop.
+              </p>
+            </details>
+            <details class="accordion">
+              <summary>Use a second pass for refinement</summary>
+              <p>
+                First ask for structure, then ask for tuning. That usually works
+                better than trying to get a perfect answer in one shot.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container split-grid">
+          <article class="paper-card">
+            <p class="mini-heading">Avoid this</p>
+            <h2>Common prompt anti-patterns</h2>
+            <ul class="plain-list">
+              <li>“Analyze this” with no task or output format.</li>
+              <li>Dumping too much unsorted context into one request.</li>
+              <li>Asking for final decisions without verification.</li>
+              <li>Forgetting to sanitize before pasting.</li>
+            </ul>
+          </article>
+          <article class="paper-card accent-card">
+            <p class="mini-heading">Helpful extra</p>
+            <h2>Prompt builder artifact</h2>
+            <p>
+              If you prefer guided prompting, the Claude community prompt maker is
+              a useful way to turn rough ideas into clearer task instructions.
+            </p>
+            <a
+              class="inline-link"
+              href="https://claude.ai/public/artifacts/3796db7e-4ef1-4cab-b70c-d045778f23ec"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open the public artifact
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">Prompting for the SOC</p>
+          <p class="footer-copy">Short templates you can adapt and review quickly.</p>
+        </div>
+        <div class="footer-links">
+          <a href="capabilities.html">Capabilities</a>
+          <a href="safety.html">Safety</a>
+          <a href="resources.html">Resources</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

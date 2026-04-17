@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="High-value, reviewable AI use cases for triage, investigation, reporting, and vulnerability work."
+    />
+    <title>Capabilities | SOC AI Reference Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="capabilities">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">SOC Reference Hub</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="prompts.html" data-nav="prompts">Prompts</a>
+          <a href="capabilities.html" data-nav="capabilities">Capabilities</a>
+          <a href="safety.html" data-nav="safety">Safety</a>
+          <a href="resources.html" data-nav="resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Where AI earns its place</p>
+          <h1>Focus on workflows that are bounded, useful, and easy to review.</h1>
+          <p class="hero-text">
+            The strongest day-to-day gains usually come from summarization,
+            correlation, drafting, and structured reasoning support.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="capability-grid">
+            <article class="capability-card">
+              <span class="tag">Triage</span>
+              <h2>Alert summarization</h2>
+              <p>
+                Turn raw alert content into a concise first-pass summary with
+                likely issue, impact, evidence gaps, and recommended next steps.
+              </p>
+              <details class="accordion">
+                <summary>Why it helps</summary>
+                <p>
+                  It cuts through noisy alert formatting and speeds up handoffs
+                  when multiple people need the same starting picture.
+                </p>
+              </details>
+            </article>
+            <article class="capability-card">
+              <span class="tag">Investigation</span>
+              <h2>IOC and timeline correlation</h2>
+              <p>
+                Compare indicators, notes, timestamps, and observations across
+                multiple sources and group them into a cleaner storyline.
+              </p>
+              <details class="accordion">
+                <summary>Why it helps</summary>
+                <p>
+                  It is especially useful when the main challenge is organization,
+                  not raw data availability.
+                </p>
+              </details>
+            </article>
+            <article class="capability-card">
+              <span class="tag">Detection</span>
+              <h2>Query explanation and drafting</h2>
+              <p>
+                Explain existing queries, suggest cleaner wording, and draft a
+                structured starting point for common investigation goals.
+              </p>
+              <details class="accordion">
+                <summary>Why it helps</summary>
+                <p>
+                  It reduces time spent staring at unfamiliar syntax and makes
+                  collaboration easier across skill levels.
+                </p>
+              </details>
+            </article>
+            <article class="capability-card">
+              <span class="tag">Reporting</span>
+              <h2>Case notes and handoffs</h2>
+              <p>
+                Convert rough notes into cleaner summaries for shift handoff,
+                technical updates, or manager-friendly communication.
+              </p>
+              <details class="accordion">
+                <summary>Why it helps</summary>
+                <p>
+                  Communication quality improves without forcing analysts to spend
+                  extra effort polishing every update from scratch.
+                </p>
+              </details>
+            </article>
+            <article class="capability-card">
+              <span class="tag">Vulnerability</span>
+              <h2>Prioritization support</h2>
+              <p>
+                Weigh exposure, exploitability, service role, and likely attacker
+                interest to help sort what deserves deeper attention first.
+              </p>
+              <details class="accordion">
+                <summary>Why it helps</summary>
+                <p>
+                  It is not a scoring replacement. It is a reasoning aid when raw
+                  severity alone does not tell the whole story.
+                </p>
+              </details>
+            </article>
+            <article class="capability-card">
+              <span class="tag">Intel</span>
+              <h2>Threat intelligence digestion</h2>
+              <p>
+                Turn long reports into operational takeaways: behaviors to watch,
+                detection ideas, and questions to validate before action.
+              </p>
+              <details class="accordion">
+                <summary>Why it helps</summary>
+                <p>
+                  Good summaries help the team absorb more intel without turning
+                  every report into a reading project.
+                </p>
+              </details>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Use carefully</p>
+            <h2>What AI is good at, and what it is not</h2>
+          </div>
+          <div class="split-grid">
+            <article class="paper-card">
+              <h3>Strong fit</h3>
+              <ul class="plain-list">
+                <li>Organizing messy information.</li>
+                <li>Creating first drafts and structured summaries.</li>
+                <li>Reframing technical content for different audiences.</li>
+                <li>Helping analysts think through next steps.</li>
+              </ul>
+            </article>
+            <article class="paper-card accent-card">
+              <h3>Weak fit</h3>
+              <ul class="plain-list">
+                <li>Acting as a final source of truth.</li>
+                <li>Making unsupervised operational decisions.</li>
+                <li>Working from unsafe or unsanitized inputs.</li>
+                <li>Replacing technical validation or evidence review.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Tooling note</p>
+            <h2>Choose the right tool for the task and environment</h2>
+            <p>
+              Claude is worth considering as a strong reasoning assistant. Copilot
+              can be especially practical in Microsoft-centered workflows. The
+              best choice depends on context, governance, and what data the tool
+              can safely work with.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">Capability guide</p>
+          <p class="footer-copy">Use AI where it saves effort without reducing oversight.</p>
+        </div>
+        <div class="footer-links">
+          <a href="prompts.html">Prompts</a>
+          <a href="safety.html">Safety</a>
+          <a href="resources.html">Resources</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

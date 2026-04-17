@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Curated public resources for learning practical AI use in security operations."
+    />
+    <title>Resources | SOC AI Reference Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="resources">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">SOC Reference Hub</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="prompts.html" data-nav="prompts">Prompts</a>
+          <a href="capabilities.html" data-nav="capabilities">Capabilities</a>
+          <a href="safety.html" data-nav="safety">Safety</a>
+          <a href="resources.html" data-nav="resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Curated learning</p>
+          <h1>Useful links, not a link dump.</h1>
+          <p class="hero-text">
+            Start with public, practical references that help you improve prompts,
+            understand defensive AI use, and explore reputable projects.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="filter-bar" role="toolbar" aria-label="Resource filters">
+            <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+            <button class="filter-chip" type="button" data-filter="official">Official</button>
+            <button class="filter-chip" type="button" data-filter="repos">Repos</button>
+            <button class="filter-chip" type="button" data-filter="learning">Learning</button>
+            <button class="filter-chip" type="button" data-filter="prompting">Prompting</button>
+          </div>
+
+          <div class="resource-grid">
+            <article class="resource-card" data-category="official learning">
+              <span class="tag">Official</span>
+              <h2>Anthropic Claude overview</h2>
+              <p>High-level product and model information from Anthropic.</p>
+              <a href="https://www.anthropic.com/claude" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+            <article class="resource-card" data-category="official learning">
+              <span class="tag">Official</span>
+              <h2>Microsoft Security Copilot docs</h2>
+              <p>Official SOC-focused guidance for prompt patterns, workflows, and product capabilities.</p>
+              <a href="https://learn.microsoft.com/en-us/copilot/security/" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+            <article class="resource-card" data-category="official">
+              <span class="tag">Official</span>
+              <h2>Project Glasswing</h2>
+              <p>Anthropic initiative focused on defensive cybersecurity and securing critical software.</p>
+              <a href="https://www.anthropic.com/glasswing" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+            <article class="resource-card" data-category="prompting learning">
+              <span class="tag">Prompting</span>
+              <h2>Interactive Prompt Maker</h2>
+              <p>A lightweight public artifact for turning rough ideas into clearer prompts.</p>
+              <a href="https://claude.ai/public/artifacts/3796db7e-4ef1-4cab-b70c-d045778f23ec" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+            <article class="resource-card" data-category="repos">
+              <span class="tag">Repo</span>
+              <h2>JuliusBrussee / caveman</h2>
+              <p>Open-source project worth browsing for AI-assisted security workflow ideas.</p>
+              <a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+            <article class="resource-card" data-category="repos learning">
+              <span class="tag">Repo</span>
+              <h2>Awesome LLM Security</h2>
+              <p>Community-curated references on LLM security, risks, and defensive considerations.</p>
+              <a href="https://github.com/corca-ai/awesome-llm-security" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+            <article class="resource-card" data-category="learning">
+              <span class="tag">Learning</span>
+              <h2>OWASP Top 10 for LLM Applications</h2>
+              <p>Useful for understanding risks, guardrails, and evaluation questions around LLM use.</p>
+              <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+            <article class="resource-card" data-category="learning official">
+              <span class="tag">Learning</span>
+              <h2>NIST AI RMF</h2>
+              <p>A governance-oriented reference for thinking about risk, controls, and responsible adoption.</p>
+              <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noreferrer">Visit link</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container split-grid">
+          <article class="paper-card">
+            <p class="mini-heading">Recommended orientation</p>
+            <h2>What to learn first</h2>
+            <ul class="plain-list">
+              <li>How to prompt clearly for bounded SOC tasks.</li>
+              <li>How to sanitize inputs and verify outputs.</li>
+              <li>How AI helps with summarization and reasoning support.</li>
+              <li>How attacker use of AI changes the threat landscape.</li>
+            </ul>
+          </article>
+          <article class="paper-card accent-card">
+            <p class="mini-heading">Tool mindset</p>
+            <h2>Recommendation, not product pitch</h2>
+            <p>
+              Claude is a useful reasoning assistant to keep in the toolkit.
+              Enterprise tools such as Copilot can be especially practical when
+              they align with the data and workflows you already use.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">Keep exploring</p>
+          <p class="footer-copy">A short list of reputable places to keep learning.</p>
+        </div>
+        <div class="footer-links">
+          <a href="prompts.html">Prompts</a>
+          <a href="capabilities.html">Capabilities</a>
+          <a href="safety.html">Safety</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

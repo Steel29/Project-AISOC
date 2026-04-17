@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Public-safe guidance on AI data sanitization, secure prompting, verification, and attacker use."
+    />
+    <title>Safety | SOC AI Reference Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="safety">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">SOC Reference Hub</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="prompts.html" data-nav="prompts">Prompts</a>
+          <a href="capabilities.html" data-nav="capabilities">Capabilities</a>
+          <a href="safety.html" data-nav="safety">Safety</a>
+          <a href="resources.html" data-nav="resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Safety and governance</p>
+          <h1>Useful outputs start with disciplined inputs.</h1>
+          <p class="hero-text">
+            AI can save time, but security teams still own sanitization,
+            validation, and the decision to act.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-grid">
+          <article class="paper-card">
+            <p class="mini-heading">Generally safe to share</p>
+            <h2>Sanitized operational context</h2>
+            <ul class="plain-list">
+              <li>Redacted alert summaries.</li>
+              <li>Generic log patterns or query goals.</li>
+              <li>Abstracted incident narratives.</li>
+              <li>Process questions and writing tasks.</li>
+            </ul>
+          </article>
+          <article class="paper-card accent-card">
+            <p class="mini-heading">Do not paste casually</p>
+            <h2>High-risk content</h2>
+            <ul class="plain-list">
+              <li>Secrets, tokens, passwords, or private keys.</li>
+              <li>Unnecessary personal or customer data.</li>
+              <li>Confidential internal information without approval.</li>
+              <li>Raw content when a sanitized version would do the job.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Simple workflow</p>
+            <h2>A useful sanitization checklist</h2>
+          </div>
+          <div class="timeline-grid">
+            <article class="timeline-step">
+              <span class="step-number">01</span>
+              <h3>Minimize</h3>
+              <p>Only include the context needed for the task.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-number">02</span>
+              <h3>Redact</h3>
+              <p>Replace sensitive names, IDs, and identifiers where possible.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-number">03</span>
+              <h3>Constrain</h3>
+              <p>Use approved tools and keep the request bounded.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-number">04</span>
+              <h3>Verify</h3>
+              <p>Check the output before action, escalation, or reporting.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Always review</p>
+            <h2>Validation is part of the workflow</h2>
+          </div>
+          <div class="accordion-group">
+            <details class="accordion" open>
+              <summary>Validate factual claims</summary>
+              <p>
+                If the model says an event happened, a query means something
+                specific, or a conclusion is likely, check the evidence directly.
+              </p>
+            </details>
+            <details class="accordion">
+              <summary>Watch for confident-sounding mistakes</summary>
+              <p>
+                Polished writing can hide incorrect reasoning. Treat the style and
+                the substance as separate things.
+              </p>
+            </details>
+            <details class="accordion">
+              <summary>Separate drafting from deciding</summary>
+              <p>
+                AI can draft the narrative or suggest next steps. Analysts still
+                decide what is true and what should happen next.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Threat awareness</p>
+            <h2>How threat actors use AI</h2>
+            <p>
+              AI supports better phishing, faster OSINT synthesis, and more
+              scalable low-effort attack activity. It does not make every actor
+              sophisticated, but it does improve speed and output quality.
+            </p>
+          </div>
+          <div class="card-grid card-grid-4">
+            <article class="info-card">
+              <span class="tag">Phishing</span>
+              <h3>Better wording</h3>
+              <p>More convincing messages with less writing effort.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">OSINT</span>
+              <h3>Faster synthesis</h3>
+              <p>Large amounts of public data summarized quickly.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">Social</span>
+              <h3>Personalization</h3>
+              <p>Tailored messaging based on target role or context.</p>
+            </article>
+            <article class="info-card">
+              <span class="tag">Scale</span>
+              <h3>More output</h3>
+              <p>Faster iteration even when skill level stays average.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">Safe use matters</p>
+          <p class="footer-copy">Good prompting starts with sound judgment and clean inputs.</p>
+        </div>
+        <div class="footer-links">
+          <a href="prompts.html">Prompts</a>
+          <a href="capabilities.html">Capabilities</a>
+          <a href="resources.html">Resources</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
