@@ -66,76 +66,169 @@
         </div>
       </section>
 
+      <section class="section section-accent">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured prompt</p>
+            <h2>Smart Prompt Maker</h2>
+            <p>
+              Use this first when the task is unclear. It turns a rough idea into
+              a structured, copy-ready prompt that works across AI tools.
+            </p>
+          </div>
+          <article class="prompt-card spotlight-prompt">
+            <div class="prompt-card-top">
+              <span class="tag">Prompt improver</span>
+              <button class="copy-button" type="button" data-copy-target="prompt-smart-maker">
+                Copy featured prompt
+              </button>
+            </div>
+            <pre id="prompt-smart-maker"># Smart Prompt Maker
+
+## Your Role
+You are an expert prompt engineer. Your job is to help the user craft a high-quality, effective prompt they can use with any AI tool. You do this through a structured two-phase process: first gathering information, then building the prompt.
+
+---
+
+## Phase 1 — Understand the Task
+
+Ask the user to describe what they want to accomplish. Once they respond, generate 5 to 7 focused clarifying questions tailored specifically to their task. Do not use generic or one-size-fits-all questions. Each question should target a distinct dimension of the task such as audience, goal, tone, format, constraints, context, or success criteria.
+
+Present your questions as a numbered list. Wait for the user to answer before proceeding.
+
+**Rules for your questions:**
+- Make every question specific to what the user described
+- Cover different angles — do not ask two questions about the same thing
+- Keep questions concise and easy to answer
+- If useful, include a brief example of the kind of answer you are looking for
+
+---
+
+## Phase 2 — Build the Prompt
+
+Once the user has answered at least half of your questions, synthesize everything into a single, well-structured prompt they can copy and use directly with any AI tool.
+
+**The final prompt must include, where relevant:**
+- A clear role or persona for the AI
+- Specific instructions tied to the user's task
+- Background context and constraints
+- Target audience and tone guidance
+- Expected output format and length
+- Any special requirements or edge cases the user mentioned
+
+**Rules for the final prompt:**
+- Write it as if addressing the AI that will execute the task, not the user
+- Use plain, direct language that works across all major AI models
+- Do not include meta-commentary or explanations inside the prompt itself
+- Present it in a clearly labeled, copy-ready block
+
+---
+
+## How to Begin
+
+Start by saying:
+
+"I'll help you build a great prompt. What do you want to accomplish? Describe your task in as much detail as you like — the more context you give me, the better my questions will be."</pre>
+          </article>
+        </div>
+      </section>
+
       <section class="section section-muted">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Copy-ready examples</p>
-            <h2>Prompt blocks you can reuse</h2>
-            <p>
-              These stay intentionally generic and sanitized so they are safe to
-              adapt inside approved environments.
-            </p>
+            <p class="eyebrow">Starter ideas</p>
+            <h2>Ideas to feed into the Smart Prompt Maker</h2>
           </div>
           <div class="prompt-grid">
             <article class="prompt-card">
               <div class="prompt-card-top">
                 <span class="tag">Triage</span>
                 <button class="copy-button" type="button" data-copy-target="prompt-alert">
-                  Copy
+                  Copy idea
                 </button>
               </div>
-              <h3>Alert summary</h3>
-              <pre id="prompt-alert">Act as a SOC analyst. Based on this sanitized alert, summarize the likely issue, possible impact, recommended next steps, and what evidence is still missing. Use bullet points and clearly state any assumptions.</pre>
+              <h3>Build an alert triage prompt</h3>
+              <pre id="prompt-alert">I want to create a prompt for alert triage.
+Context: [alert type], [tool/source], [sanitized fields available].
+Goal: help an analyst decide [escalate / close / investigate further].
+Output needed: [brief summary], [risk], [evidence gaps], [next steps].
+Tone: concise and operational.
+Constraints: do not make unsupported conclusions; clearly state uncertainty.</pre>
             </article>
             <article class="prompt-card">
               <div class="prompt-card-top">
                 <span class="tag">Investigation</span>
                 <button class="copy-button" type="button" data-copy-target="prompt-ioc">
-                  Copy
+                  Copy idea
                 </button>
               </div>
-              <h3>IOC correlation</h3>
-              <pre id="prompt-ioc">Compare these sanitized indicators, notes, and timeline entries. Group related items, identify likely themes, flag weak links, and suggest the top three follow-up checks before escalation.</pre>
+              <h3>Build an IOC correlation prompt</h3>
+              <pre id="prompt-ioc">I want to create a prompt for correlating investigation evidence.
+Context: [sanitized indicators], [timeline notes], [related alerts or tickets].
+Goal: identify relationships, likely themes, and missing evidence.
+Output needed: [grouped findings], [confidence level], [follow-up checks].
+Tone: analytical but cautious.
+Constraints: separate confirmed evidence from hypotheses.</pre>
             </article>
             <article class="prompt-card">
               <div class="prompt-card-top">
                 <span class="tag">Detection</span>
                 <button class="copy-button" type="button" data-copy-target="prompt-query">
-                  Copy
+                  Copy idea
                 </button>
               </div>
-              <h3>Query helper</h3>
-              <pre id="prompt-query">Explain what this query is doing in plain language, identify blind spots, and propose a cleaner version for the same investigation goal. Keep the explanation concise and call out any assumptions.</pre>
+              <h3>Build a query helper prompt</h3>
+              <pre id="prompt-query">I want to create a prompt for improving a security query.
+Context: [query language], [data source], [investigation goal].
+Goal: explain what the query does and suggest improvements.
+Output needed: [plain-language explanation], [blind spots], [cleaner query idea].
+Tone: practical and easy to understand.
+Constraints: preserve the original detection intent and call out assumptions.</pre>
             </article>
             <article class="prompt-card">
               <div class="prompt-card-top">
                 <span class="tag">Vulnerability</span>
                 <button class="copy-button" type="button" data-copy-target="prompt-vuln">
-                  Copy
+                  Copy idea
                 </button>
               </div>
-              <h3>Prioritization support</h3>
-              <pre id="prompt-vuln">Review this sanitized vulnerability context. Prioritize the findings using exposure, exploitability, asset role, and likely attacker interest. Present the result as high, medium, or low priority with a short justification.</pre>
+              <h3>Build a prioritization prompt</h3>
+              <pre id="prompt-vuln">I want to create a prompt for vulnerability prioritization.
+Context: [asset exposure], [service role], [known weakness], [available severity data].
+Goal: decide what deserves attention first.
+Output needed: [priority level], [reasoning], [questions to validate].
+Tone: risk-focused and concise.
+Constraints: do not rely on severity alone; include exposure and likely attacker interest.</pre>
             </article>
             <article class="prompt-card">
               <div class="prompt-card-top">
                 <span class="tag">Reporting</span>
                 <button class="copy-button" type="button" data-copy-target="prompt-report">
-                  Copy
+                  Copy idea
                 </button>
               </div>
-              <h3>Incident handoff</h3>
-              <pre id="prompt-report">Turn these sanitized investigation notes into a clean handoff update. Include current understanding, notable evidence, unresolved questions, and immediate next actions. Keep the tone professional and concise.</pre>
+              <h3>Build a handoff prompt</h3>
+              <pre id="prompt-report">I want to create a prompt for SOC handoff notes.
+Context: [sanitized investigation notes], [current status], [known open questions].
+Goal: make the handoff clear for the next analyst or shift.
+Output needed: [current understanding], [evidence], [risks], [next actions].
+Tone: professional and brief.
+Constraints: avoid speculation unless clearly labeled.</pre>
             </article>
             <article class="prompt-card">
               <div class="prompt-card-top">
                 <span class="tag">Learning</span>
                 <button class="copy-button" type="button" data-copy-target="prompt-intel">
-                  Copy
+                  Copy idea
                 </button>
               </div>
-              <h3>Threat intel digest</h3>
-              <pre id="prompt-intel">Summarize this threat intelligence content for a SOC audience. Focus on behaviors to watch, likely relevance, operational takeaways, and any gaps that would need confirmation before action.</pre>
+              <h3>Build an intel digest prompt</h3>
+              <pre id="prompt-intel">I want to create a prompt for digesting threat intelligence.
+Context: [report type], [threat actor or campaign], [relevant technologies].
+Goal: convert the content into SOC action points.
+Output needed: [behaviors to watch], [detection ideas], [relevance], [gaps].
+Tone: concise and operational.
+Constraints: distinguish reported facts from recommended actions.</pre>
             </article>
           </div>
         </div>

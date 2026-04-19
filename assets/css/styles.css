@@ -378,6 +378,41 @@ pre {
   margin-bottom: 0.5rem;
 }
 
+.prompt-card pre {
+  max-height: 26rem;
+  overflow: auto;
+  padding: 1rem;
+  background: rgba(255, 250, 244, 0.74);
+  border: 1px solid rgba(216, 203, 184, 0.78);
+  border-radius: var(--radius-md);
+}
+
+.spotlight-prompt {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 252, 246, 0.88), rgba(201, 138, 106, 0.13)),
+    var(--surface);
+  border-color: rgba(182, 94, 60, 0.34);
+}
+
+.spotlight-prompt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at top right, rgba(182, 94, 60, 0.16), transparent 32%);
+}
+
+.spotlight-prompt > * {
+  position: relative;
+}
+
+.spotlight-prompt pre {
+  max-height: 32rem;
+  background: rgba(255, 250, 244, 0.84);
+}
+
 .copy-button,
 .filter-chip {
   border: 1px solid rgba(216, 203, 184, 0.95);
