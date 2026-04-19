@@ -413,6 +413,41 @@ pre {
   background: rgba(255, 250, 244, 0.84);
 }
 
+.script-card {
+  overflow: hidden;
+}
+
+.script-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.script-textarea {
+  width: 100%;
+  min-height: 32rem;
+  resize: vertical;
+  padding: 1rem;
+  border: 1px solid rgba(216, 203, 184, 0.95);
+  border-radius: var(--radius-md);
+  background: rgba(255, 250, 244, 0.86);
+  color: var(--text);
+  font: 0.88rem/1.65 ui-monospace, "Cascadia Code", "Consolas", monospace;
+}
+
+.usage-code {
+  display: block;
+  margin-top: 0.55rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(216, 203, 184, 0.85);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 250, 244, 0.72);
+  color: var(--text);
+  overflow-x: auto;
+}
+
 .copy-button,
 .filter-chip {
   border: 1px solid rgba(216, 203, 184, 0.95);

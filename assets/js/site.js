@@ -25,12 +25,14 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
       return;
     }
 
+    const copyText = "value" in source ? source.value.trim() : source.textContent.trim();
+
     try {
-      await navigator.clipboard.writeText(source.textContent.trim());
+      await navigator.clipboard.writeText(copyText);
       setCopiedState(button, "Copied");
     } catch (error) {
       const fallback = document.createElement("textarea");
-      fallback.value = source.textContent.trim();
+      fallback.value = copyText;
       fallback.setAttribute("readonly", "");
       fallback.style.position = "absolute";
       fallback.style.left = "-9999px";
